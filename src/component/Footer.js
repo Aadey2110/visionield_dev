@@ -2,6 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+import footerImg from "../assets/img/Home-Banner-6.jpg";
+import fullLogo from "../assets/img/fullLogo.png";
+import linkedinLogo from "../assets/img/linkedinLogo.png";
+
 export default function Footer() {
   const navigator = useNavigate();
   const isMobile = window.innerWidth >= 768;
@@ -11,7 +15,7 @@ export default function Footer() {
   };
   return (
     <footer>
-      <footer className="flex flex-col md:flex-row justify-between text-white md:gap-14 items-stretch bg-gray-600 md:h-screen">
+      <footer className="flex flex-col md:flex-row justify-between text-white md:gap-14 items-stretch bg-gray-600 md:h-custom md:max-h-screen">
         <div className="px-6 py-8 md:p-10 md:w-5/12 flex flex-col gap-10 ">
           <motion.div
             initial={isMobile && { opacity: 0 }}
@@ -38,7 +42,7 @@ export default function Footer() {
                 ease: "easeInOut",
               }
             }
-            className="text-base leading-7 font-light"
+            className="text-lg leading-7 font-light"
           >
             Reach out to us today! We're here to answer all your questions and
             provide expert guidance on our tailored services for your project.
@@ -68,7 +72,7 @@ export default function Footer() {
         <div className="md:w-7/12">
           <img
             className="w-full md:h-full object-cover rounded-custom-4 h-screen"
-            src="./img/Home-Banner-6.jpg"
+            src={footerImg}
             alt=""
           />
         </div>
@@ -79,12 +83,9 @@ export default function Footer() {
             <div>
               <div className="flex items-stretch flex-col ">
                 <div className="flex justify-center text-white ">
-                  <img
-                    src=".\img\full_logo.png"
-                    className="h-40 md:mx-auto"
-                  ></img>
+                  <img src={fullLogo} className="h-40 md:mx-auto"></img>
                 </div>
-                <p className="max-w-md mx-auto mt-2 text-lg leading-relaxed text-center text-gray-400   ">
+                <p className="max-w-md mx-auto mt-2 text-lg leading-relaxed text-center text-gray-400">
                   Envisioning Excellence
                 </p>
               </div>
@@ -285,7 +286,7 @@ export default function Footer() {
                           className="text-white transition hover:text-white/75"
                         >
                           <span className="sr-only">Linkedin</span>
-                          <img className="w-6 h-6" src=".\img\Linkedin.png" />
+                          <img className="w-6 h-6" src={linkedinLogo} />
                         </a>
                       </li>
                     </ul>

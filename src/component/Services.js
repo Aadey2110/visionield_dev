@@ -1,6 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import homePage3 from "../assets/img/homePage3.png";
+import homePage4 from "../assets/img/homePage4.png";
+import homePage5 from "../assets/img/homePage5.png";
+import homePage6 from "../assets/img/homePage6.png";
+
+import servicePage1 from "../assets/img/servicePage1.png";
+import servicePage2 from "../assets/img/servicePage2.png";
+import servicePage3 from "../assets/img/servicePage3.png";
+import servicePage4 from "../assets/img/servicePage4.png";
+
 export default function Services() {
   const navigator = useNavigate();
   const navigate = (p) => {
@@ -20,15 +30,11 @@ export default function Services() {
       </div>
       {/* section-1 => ends */}
       {/* section-2 */}
-      <div className="flex flex-col md:flex-row justify-between items-stretch mx-4 md:mx-10 shadow-custom-2 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8">
+      <div className="flex flex-col md:flex-row justify-between items-stretch mx-4 md:mx-10 shadow-custom-3 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8">
         <div className="md:w-7/12 flex flex-col gap-10 md:gap-16">
           <div className="flex justify-center md:justify-start items-center md:gap-5">
             <div className="h-16">
-              <img
-                className="h-full"
-                src="./img/Photos for website1/branding logo.png"
-                alt=""
-              />
+              <img className="h-full" src={homePage3} alt="" />
             </div>
             <div className="text-center font-medium text-3xl md:text-4xl">
               Project Branding
@@ -53,20 +59,16 @@ export default function Services() {
         <div className="md:w-5/12 pt-6 h-60 md:h-auto">
           <img
             className="h-full w-full object-cover"
-            src=".\img\Branding.png"
+            src={servicePage1}
             alt=""
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between h-min mx-4 md:mx-10 shadow-custom-2 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8">
+      <div className="flex flex-col md:flex-row justify-between h-min mx-4 md:mx-10 shadow-custom-3 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8">
         <div className="md:w-7/12 flex flex-col gap-10 md:gap-16">
           <div className="flex justify-center md:justify-start items-center md:gap-5">
             <div className="h-16">
-              <img
-                className="h-full"
-                src=".\img\Photos for website1\marketing logo.png"
-                alt=""
-              />
+              <img className="h-full" src={homePage4} alt="" />
             </div>
             <div className="text-center font-medium text-3xl md:text-4xl">
               Marketing Management
@@ -91,20 +93,16 @@ export default function Services() {
         <div className="md:w-5/12 pt-6 h-60 md:h-auto">
           <img
             className="w-full h-full object-cover"
-            src=".\img\Marketing.png"
+            src={servicePage2}
             alt=""
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-stretch mx-4 md:mx-10 shadow-custom-2 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8">
+      <div className="flex flex-col md:flex-row justify-between items-stretch mx-4 md:mx-10 shadow-custom-3 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8">
         <div className="md:w-7/12 flex flex-col gap-10 md:gap-16">
           <div className="flex justify-center md:justify-start items-center md:gap-5">
             <div className="h-16">
-              <img
-                className="h-full"
-                src="./img/Photos for website1/sales logo.png"
-                alt=""
-              />
+              <img className="h-full" src={homePage5} alt="" />
             </div>
             <div className="text-center font-medium text-3xl md:text-4xl">
               Sales Management
@@ -129,20 +127,16 @@ export default function Services() {
         <div className="md:w-5/12 pt-6 h-60 md:h-auto">
           <img
             className="h-full w-full object-cover"
-            src=".\img\Sales.png"
+            src={servicePage3}
             alt=""
           />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-stretch mx-4 md:mx-10 shadow-custom-2 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8 mb-40">
+      <div className="flex flex-col md:flex-row justify-between items-stretch mx-4 md:mx-10 shadow-custom-3 rounded-custom-3 px-7 md:px-12 py-9 md:gap-40 mt-10 md:mt-8 mb-40">
         <div className="md:w-7/12 flex flex-col gap-10 md:gap-16">
           <div className="flex justify-center md:justify-start items-center md:gap-5">
             <div className="h-16">
-              <img
-                className="h-full"
-                src=".\img\Photos for website1\strategic consulting logo.png"
-                alt=""
-              />
+              <img className="h-full" src={homePage6} alt="" />
             </div>
             <div className="text-center font-medium text-3xl md:text-4xl">
               Strategic consulting
@@ -167,7 +161,7 @@ export default function Services() {
         <div className="md:w-5/12 pt-6 h-60 md:h-auto">
           <img
             className="h-full w-full object-cover"
-            src=".\img\Strategic consulting.png"
+            src={servicePage4}
             alt=""
           />
         </div>

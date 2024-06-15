@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import fullLogo from "../assets/img/fullLogo.png";
+
 export default function Header() {
   const navigate = useNavigate();
   const handleNavigation = (path) => {
@@ -25,9 +27,12 @@ export default function Header() {
   };
 
   return (
-    <header id="head" className="h-24 px-6 flex justify-between items-center bg-gray-600 text-white">
+    <header
+      id="head"
+      className="h-24 px-6 flex justify-between items-center bg-gray-600 text-white"
+    >
       <div className="">
-        <img className="h-20" src="./img/full_logo.png" alt="" />
+        <img className="h-20" src={fullLogo} alt="" />
       </div>
       <div>
         <nav className="list-none hidden sm:flex space-x-10">
@@ -40,9 +45,9 @@ export default function Header() {
           <li className="cursor-pointer">
             <a onClick={() => handleNavigation("/services")}>SERVICES</a>
           </li>
-          <li className="cursor-pointer">
+          {/* <li className="cursor-pointer">
             <a onClick={() => handleNavigation("/career")}>CAREERS</a>
-          </li>
+          </li> */}
           <li className="cursor-pointer">
             <a onClick={() => handleNavigation("/contact")}>CONTACT US</a>
           </li>
@@ -75,9 +80,9 @@ export default function Header() {
             <div className="cursor-pointer hover:text-slate-400 fade-down2">
               <a onClick={() => handleNavigation("/services")}>SERVICES</a>
             </div>
-            <div className="cursor-pointer hover:text-slate-400 fade-down3">
+            {/* <div className="cursor-pointer hover:text-slate-400 fade-down3">
               <a onClick={() => handleNavigation("/career")}>CAREERS</a>
-            </div>
+            </div> */}
             <div className="cursor-pointer hover:text-slate-400 fade-down4 delay-500">
               <a onClick={() => handleNavigation("/contact")}>CONTACT US</a>
             </div>

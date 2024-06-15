@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { sendMailCustomer } from "../controller/Gmail";
 import { useState } from "react";
+
+import contactPage1 from "../assets/img/contactPage1.png";
+import contactPage2 from "../assets/img/contactPage2.png";
+import contactPage3 from "../assets/img/contactPage3.jpg";
+
 export default function Services() {
   const navigator = useNavigate();
 
@@ -10,6 +15,10 @@ export default function Services() {
   const [message, setMessage] = useState("");
   const [contact, setContact] = useState("");
   const [error, setError] = useState(false);
+
+  useEffect(() => {
+    setError(false);
+  }, [email, contact, fullname, message]);
 
   const navigate = (p) => {
     navigator(p);
@@ -69,21 +78,13 @@ export default function Services() {
           </div>
           <div className="flex flex-col md:flex-row mt-12 md:mt-20 md:justify-between pr-5 gap-16 md:gap-0">
             <div className="flex flex-col items-center md:items-start w-1/2">
-              <img
-                className="w-auto h-10"
-                src=".\img\Photos for website1\call or message.png"
-                alt=""
-              />
+              <img className="w-auto h-10" src={contactPage1} alt="" />
               <div className="mb-5 mt-2">GIVE US A CALL OR A MESSAGE</div>
               <div>+91 6359429294</div>
               <div>contact@visionieldrealty.com</div>
             </div>
             <div className="flex flex-col items-center md:items-start w-1/2">
-              <img
-                className="w-auto h-10"
-                src=".\img\Photos for website1\location.png"
-                alt=""
-              />
+              <img className="w-auto h-10" src={contactPage2} alt="" />
               <div className="mb-5 mt-2">OUR LOCATION</div>
               <div>
                 12, Kalpana Flats, B/H Narmada Guest House, Race Course Rd,
@@ -123,7 +124,9 @@ export default function Services() {
             onChange={(e) => setMessage(e.target.value)}
           />
           {error && (
-            <div className="text-red-600">Please fill all the fields</div>
+            <div className="text-red-600">
+              *Please fill all the required fields
+            </div>
           )}
           <button
             onClick={handleSubmit}
@@ -137,7 +140,7 @@ export default function Services() {
         <div className="md:w-7/12 flex flex-col pb-4 md:pb-40">
           <img
             className="mx-auto md:mx-0 rounded-custom-3 object-cover min-h-custom-2"
-            src="./img/Contact-Banner-1.jpg"
+            src={contactPage3}
             alt=""
           />
         </div>

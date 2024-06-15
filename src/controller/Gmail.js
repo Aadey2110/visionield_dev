@@ -29,29 +29,29 @@
 //   // }
 // };
 
-import { render } from "@react-email/render";
-import nodemailer from "nodemailer";
-import { Email } from "../component/Email";
+// import { render } from "@react-email/render";
+// import nodemailer from "nodemailer";
+// import { Email } from "../component/Email";
 
-const sendMailCustomer = async (props) => {
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.net",
-    port: 465,
-    secure: true,
-    auth: {
-      user: "aadeyshah55@gmail.com",
-      pass: "cmxx zuzb mfxs sbho",
-    },
-  });
+// const sendMailCustomer = async (props) => {
+//   const transporter = nodemailer.createTransport({
+//     host: "smtp.gmail.net",
+//     port: 465,
+//     secure: true,
+//     auth: {
+//       user: "aadeyshah55@gmail.com",
+//       pass: "cmxx zuzb mfxs sbho",
+//     },
+//   });
 
-  const emailHtml = render(<Email url="https://example.com" />);
+//   const emailHtml = render(<Email url="https://example.com" />);
 
-  const options = {
-    from: "aadeyshah55@gmail.com",
-    to: "aadeyshah55@gmail.com",
-    subject: "hello world",
-    html: emailHtml,
-  };
+//   const options = {
+//     from: "aadeyshah55@gmail.com",
+//     to: "aadeyshah55@gmail.com",
+//     subject: "hello world",
+//     html: emailHtml,
+//   };
 
-  await transporter.sendMail(options);
-};
+//   await transporter.sendMail(options);
+// };
